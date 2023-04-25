@@ -1,11 +1,17 @@
 const fs = require('fs');
 
-fs.writeFileSync('notes.txt', 'This file was created by Node.js!');
+// fs.writeFile('notes.txt', 'This file was created by Node.js!');
 
-fs.appendFileSync('notes.txt', '\nHello World!');
+// fs.appendFile('notes.txt', '\nHello World!');
+// fs.appendFile('notes.txt', '\nHello World!');
+// fs.appendFile('notes.txt', '\nHello World!');
+// fs.appendFile('notes.txt', '\nHello World!');
+// fs.appendFile('notes.txt', '\nHello World!');
 
 
-const data = fs.readFileSync('notes.txt');
+fs.readFile('notes.txt', (err, data) => {
+    if (err) throw err;
+    console.log(data.toString());
+});
 
-
-console.log(data.toString());
+console.log('This is after the read call');
