@@ -1,5 +1,7 @@
-const path = require('os');
+const fs = require('fs');
 
-const platform = path.cpus();
-console.log(platform);
-// Path: index.js
+fs.writeFileSync('notes.txt', 'This file was created by Node.js!');
+
+fs.appendFileSync('notes.txt', '\nHello World!');
+
+fs.closeSync(1);
