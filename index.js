@@ -1,17 +1,11 @@
-const fs = require('fs');
+const EventEmitter = require('events');
 
-// fs.writeFile('notes.txt', 'This file was created by Node.js!');
+const emitter = new EventEmitter();
 
-// fs.appendFile('notes.txt', '\nHello World!');
-// fs.appendFile('notes.txt', '\nHello World!');
-// fs.appendFile('notes.txt', '\nHello World!');
-// fs.appendFile('notes.txt', '\nHello World!');
-// fs.appendFile('notes.txt', '\nHello World!');
-
-
-fs.readFile('notes.txt', (err, data) => {
-    if (err) throw err;
-    console.log(data.toString());
+// Register a listener for bellRing event
+emitter.on('bellRing', () => {
+    console.log('Making a noise, emit an event');
 });
 
-console.log('This is after the read call');
+emitter.emit('bellRing'); // Making a noise, emit an event
+
