@@ -1,9 +1,7 @@
-const ages = require('./people.js');
-const arrays = require('./collection_arrays.js');
-const _ = require('lodash');
+const path = require('path');
+const myPath = '/Users/Refuge/Desktop/NodeJS/index.js';
 
-
-console.log(arrays.numbers);
-_.reverse(arrays.numbers);
-
-console.log(arrays.numbers);
+console.log(path.extname(myPath));
+console.log(path.dirname(myPath));
+console.log(path.parse(myPath));
+// Path: index.js
