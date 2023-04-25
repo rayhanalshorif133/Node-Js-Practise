@@ -1,6 +1,0 @@
-This file was created by Node.js!
-Hello World!
-Hello World!
-Hello World!
-Hello World!
-Hello World!
