@@ -1,13 +1,12 @@
 import React, { useEffect, useReducer, useRef } from 'react'
 import './App.css';
-import Counter from './components/Counter';
 
 
 function App() {
 
   return (
     <>
-        <Counter />
+      <h1>App</h1>
     </>
   )
 }
